@@ -3,6 +3,7 @@ public class Controller {
 
     public static void main(String args[]) {
         ContactBook contactB = new ContactBook();
+
         do {
             int option = View.menu();
             if (option == 1) {

@@ -30,9 +30,11 @@ public class View {
             String nameCB = input.nextLine();
 
             ContactBookN.setName(nameCB);
+
             System.out.println("---+---+---+---+---+---+---+---+---+");
             System.out.println("Contact Book created successfully!");
             System.out.println("---+---+---+---+---+---+---+---+---+");
+
            return ContactBookN;
 
     }
@@ -73,6 +75,7 @@ public class View {
             System.out.println("List the contacts");
             System.out.println(cb);
         }
+
         public static boolean conversion (String conF){
             boolean yn = false;
             if (conF.equals("y")){

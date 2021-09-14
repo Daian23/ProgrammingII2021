@@ -1,7 +1,7 @@
 public class DataModel {
 
-    public static void saveCB(ContactBook contactB){
-        String nameCB= contactB.getName();
+    public static void saveCB(ContactBook contactB) {
+        String nameCB = contactB.getName();
         String st_ContactB = contactB.toString("&%&");
         GestorArchivos.guardar(nameCB,st_ContactB);
 

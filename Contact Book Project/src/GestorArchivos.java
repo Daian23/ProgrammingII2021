@@ -45,6 +45,29 @@ import java.io.File;
             }
         }
 
+        public static void guardarContainer(String nombre, String data){
+
+            try {
+                salidaArchivo = new BufferedWriter(new FileWriter(
+                        "/home/daiana/Documentos/MisFicheros/"+nombre+".txt"));
+
+                salidaArchivo.write(data);
+
+            } catch (IOException ex) {
+                Logger.getLogger(GestorArchivos.class.getName()).log(
+                        Level.SEVERE, null, ex);
+            }finally{
+                if(salidaArchivo!=null){
+                    try {
+                        salidaArchivo.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(GestorArchivos.class.getName()).log(
+                                Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        }
+
         public static String cargar(String nombre) {
 
             String linRetorno = "";

@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Contact {
 
     private String name;
@@ -14,36 +12,36 @@ public class Contact {
         this.topList = topL;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setMobil(String mobil) {
-        this.mobil = mobil;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getMobil() {
         return mobil;
     }
 
-    public void setTopList(boolean topList) {
-        this.topList = topList;
+    public void setMobil(String mobil) {
+        this.mobil = mobil;
     }
 
     public boolean getTopList() {
         return topList;
+    }
+
+    public void setTopList(boolean topList) {
+        this.topList = topList;
     }
 
     public String toString(){
@@ -53,28 +51,5 @@ public class Contact {
     public String toString(String sep){
         String caracteres = this.name + sep + this.email + sep + this.mobil + sep + this.topList;
         return  caracteres;
-    }
-
-    /*public boolean equals (Object o){
-        Contact contactN = (Contact) o;
-        return (contactN.name == name) && (contactN.email == email) && (contactN.mobil == mobil) && (contactN.topList == topList);
-
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, email, mobil, topList);
-    }*/
-
-    @Override
-    public boolean equals(Object o) {
-
-        Contact contact = (Contact) o;
-        return mobil.equals(contact.mobil);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(mobil);
     }
 }
